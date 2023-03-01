@@ -9,7 +9,7 @@
  * @author David J. Barnes and Michael Kolling
  * @version 2008.03.30
  */
-public class TicketMachine
+class TicketMachine
 {
     // The price of a ticket from this machine.
     private Integer price;
@@ -19,13 +19,15 @@ public class TicketMachine
     private Integer total;
     // The number of tickets printed.
     private Integer ticketNumber;
+    // The variable the exercise told me to create
+    Integer status;
 
     /**
      * Create a machine that issues tickets of the given price.
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine(Integer ticketCost)
+    TicketMachine(Integer ticketCost)
     {
         price = ticketCost;
         balance = 0;
