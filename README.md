@@ -145,3 +145,18 @@ public Book(String title, double price)
 * Can you assume anything about the names of its fields? string paragraph, int pagecount, string chapter, float chaptersection
 
 READ upto and INCLUDING section 2.15 of this chapter.
+
+2.2 Price is null
+
+2.21 The names of the methods and return names are different
+2.22 The amount of money inserted into the machine
+2.23 No it works
+2.25 will not compile
+2.26 type string vs type int; all getTotal does is return the total value, the printString method is:running the increment ticket number method, performs addition arithmetic operation on the total field, clears the balance, and then prints the ticket cost and the total amount that was collected by the machine.
+2.27 Yes. When i remove return statements from either method they fail to compile and will not work.
+2.29 Constructors do not have return types
+2.35 Different outputs. I have the price set to the ticket cost parameter in the constructor. So, once the objects price is set as the ticket price, then when i call the price field in the show price method, it prints the same value.
+2.36It would just print "# price cents" --> price is now a string literal and not a field value
+2.37 It would print the same thing as 2.36
+2.38 No because they aren't using the price value
+2.39

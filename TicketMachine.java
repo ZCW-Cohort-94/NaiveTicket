@@ -33,6 +33,14 @@
         ticketNumber = 0;
     }
 
+    public TicketMachine(int ticketCost)
+    {
+        int price = ticketCost;
+        balance = 0;
+        total = 0;
+    
+    }
+    
     /**
      * Return the price of a ticket.
      */
@@ -54,7 +62,7 @@
      * Return the amount of money already inserted for the
      * next ticket.
      */
-    public Integer getBalance()
+    public Integer getAmount()
     {
         return balance;
     }
@@ -62,10 +70,14 @@
     /**
      * Receive an amount of money in cents from a customer.
      */
-    public Integer insertMoney(Integer amount)
+    public void insertMoney(int amount)
     {
-        balance = balance + amount;
-        return balance;
+        if(amount> 0){
+            balance = balance + amount;
+        }
+        else{
+            System.out.println("use a positive amount: " + amount);
+        }
     }
     
     public Integer calculateTotal(){
@@ -78,6 +90,9 @@
         return ticketNumber;
     }
     
+    public Integer getTotal(){
+        return total;
+    };
 
     /**
      * Print a ticket.
@@ -95,4 +110,37 @@
         
         return "Ticket price: " + price + " cents. " + "Your total is " + total + ".";
     }
+    public void prompt(){
+        System.out.println("Please insert the correct amount of money");
+    }
+    
+    public void showPrice(){
+        System.out.println("The price of a ticket is " + price + ".");
+    }
+    
+    public void setPrice(Integer newPrice){
+        price = newPrice;
+    }
+    public void empty(){
+        total = 0;
+    }
 }
+
+
+/* public Pet(String petsName){
+/*    name = petsName
+}
+ */
+
+/*
+ * public void increase(int points){
+ *     
+ *     score = score + points;
+ *     
+ }
+ */
+/*
+ * public void discount(int amount){
+ *     price = price - amount;
+ }
+ */
